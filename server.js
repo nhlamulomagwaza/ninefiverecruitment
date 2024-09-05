@@ -42,7 +42,7 @@ app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
-    cookie: { secure: false, maxAge: 600000 } // Set the cookie expiration time
+    cookie: { secure: false, maxAge: 6000000 } // Set the cookie expiration time
   }));
   
   app.use(cookieParser())
