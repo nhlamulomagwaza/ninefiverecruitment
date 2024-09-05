@@ -1,0 +1,26 @@
+@import '../../../styles/fragments/mixins/mixins.scss';
+@import '../../fragments/colors/colors.scss';
+@import '../../fragments/fonts/fonts.scss';
+//HERO
+.hero{
+    padding:0rem 12rem;
+        .hero-showcase {
+             color: $fore-text-color;
+        margin-top: 5rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+           
+            
+         }
+
+         .hero-showcase-brandtitle{
+            font-family: $Orbitron;
+          font-size: 5.3rem;
+         }
+
+         .hero-showcase-btn{
+            @include buttons;     
+         }
+    
+     }

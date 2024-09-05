@@ -1,0 +1,47 @@
+@import '../fragments/mixins/mixins.scss';
+
+
+.jobsportal{
+    @include globalPadding;
+    margin-bottom: 4rem;
+}
+
+
+
+//MEDIA QUERIES || RESPONSIVE STYLES
+@media (max-width:1400px){
+    .jobsportal{
+
+
+        padding: 0rem 9rem;
+    }
+
+}
+
+@media (max-width:1300px){
+
+    .jobsportal{
+
+
+        padding: 0rem 5rem;
+    }
+}
+
+
+
+@media(max-width:1180px){
+
+    .jobsportal{
+
+
+        padding: 0rem 4rem;
+    }
+}
+@media(max-width:486px){
+
+    .jobsportal{
+
+
+        padding: 0rem 1rem;
+    }
+}

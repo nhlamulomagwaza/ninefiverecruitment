@@ -1,0 +1,127 @@
+@import '../../styles/fragments/colors/colors.scss';
+
+@import '../fragments/mixins/mixins.scss';
+
+
+
+.careers{
+
+    @include globalPadding;
+}
+
+
+.careers-content{
+    margin-top: 4rem;
+
+    margin-bottom: 4rem;
+
+
+    .careers-header{
+
+        h1{
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        span{
+            color:$main-color;
+        }
+        }
+        .careers-pitch{
+    margin-bottom: 3rem;
+            p{
+                margin-bottom: 2rem;
+              
+                font-weight: 600;
+            }
+
+           
+        }
+    }
+
+    .career-card{
+        background-color: $main-color;
+        color:$white;
+        padding:2rem;
+        margin-bottom: 2rem;
+
+       
+     
+
+   
+        .career-title{
+            margin-bottom: 2rem;
+        }
+        .career-description{
+            margin-bottom: 1rem;
+        }
+        .career-apply{
+            @include buttons;
+            border:1px solid white;
+            color:white;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:150px;
+
+            &:hover{
+                background-color: white;
+                color:black;
+                border:1px solid white;
+            }
+        }
+    }
+}
+
+.careers-bg{
+    height:40dvh;
+    color:$white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)), url('../../assets/careers-bg.webp');
+   width:100%;
+   background-position: center;
+     background-attachment: fixed;
+}
+
+
+
+
+
+//MEDIA QUERIES || RESPONSIVE STYLES
+
+@media (max-width:1400px){
+    .careers{
+
+
+        padding: 0rem 9rem;
+    }
+
+}
+
+@media (max-width:1300px){
+
+    .careers{
+
+
+        padding: 0rem 5rem;
+    }
+}
+
+
+
+@media(max-width:1180px){
+
+    .careers{
+
+
+        padding: 0rem 4rem;
+    }
+}
+@media(max-width:486px){
+
+    .careers{
+
+
+        padding: 0rem 1rem;
+    }
+}
+

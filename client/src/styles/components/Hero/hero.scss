@@ -1,0 +1,127 @@
+@import '../../../styles/fragments/mixins/mixins.scss';
+@import '../../fragments/colors/colors.scss';
+@import '../../fragments/fonts/fonts.scss';
+//HERO
+.hero{
+    padding:0rem 12rem;
+        .hero-showcase {
+             color: $fore-text-color;
+        margin-top: 5rem;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+           
+            
+         }
+
+         .hero-showcase-brandtitle{
+            font-family: $Orbitron;
+          font-size: 5.3rem;
+         }
+
+         .hero-showcase-btn{
+            @include buttons;  
+           
+         }
+    
+     }
+
+
+
+
+
+     //MEDIA QUERIES || RESPONSIVE STYLES
+
+
+     @media (max-width:1400px){
+
+        .hero{
+
+            padding: 0rem 9rem;
+        }
+     }
+
+
+@media(max-width:1300px){
+
+
+    .hero{
+
+        padding: 0rem 5rem;
+    }
+}
+
+@media(max-width:1180px){
+    .hero{
+
+        padding: 0rem 4rem;
+    }
+}
+
+@media (max-width:1000px){
+
+    .hero-showcase-btn{
+
+        margin-bottom: 15rem;
+    }
+}
+
+
+
+@media (max-width:720px){
+
+    .hero{
+        .hero-showcase-brandtitle{
+            display:flex;
+            justify-content: left;
+            font-family: $Orbitron;
+            font-size: 4rem;
+        }
+    }
+
+   
+}
+
+
+@media(max-width:486px){
+
+.hero{
+    padding: 0rem 1rem;
+}
+
+}
+
+@media (max-width:465px){
+
+    .hero{
+        display:flex;
+            justify-content: center;
+            flex-direction: column;
+        .hero-showcase-brandtitle{
+            
+            font-family: $Orbitron;
+            font-size: 3rem;
+        }
+        .hero-showcase-btn{
+            @include buttons;
+            padding:0.5rem 1rem;     
+         }
+
+         .hero-showcase-slogan{
+            font-size: 0.8rem;
+         }
+    }
+
+   
+}
+
+
+
+
+
+
+
+
+
+
+

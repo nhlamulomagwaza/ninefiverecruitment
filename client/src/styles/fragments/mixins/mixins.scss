@@ -1,0 +1,42 @@
+@import '../colors/colors.scss';
+
+@mixin globalPadding{
+    padding:0rem 12rem;
+}
+
+@mixin GenericPadding{
+    padding:2rem;
+}
+
+@mixin buttons{
+    border:none;
+    outline:none;
+    background-color: $main-color;
+    color:$white;
+    padding:1rem 1.8rem;
+
+    border-radius: 3px;
+    transition: .2s ease-in-out;
+
+    margin-top: 2rem;
+   
+
+    &:hover{
+        background-color: $white;
+        color:$black;
+        outline:1px solid $main-color;
+       
+        
+cursor: pointer;
+    }
+}
+
+@mixin transition2s{
+
+    transition: .2s ease-in-out;
+}
+@mixin transition3s{
+
+    transition: .3s ease-in-out;
+}
+

@@ -1,0 +1,142 @@
+@import '../../styles/fragments/colors/colors.scss';
+
+@import '../fragments/mixins/mixins.scss';
+
+
+.uploadresume{
+
+
+    @include globalPadding;
+    margin-top: 2rem;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+   
+}
+
+
+
+/* HEADER */
+
+
+.uploadresume-header{
+    margin-bottom: 2rem;
+    text-align: center;
+    margin: 0 auto;
+    display:flex;
+    justify-content: center;
+width: 100%;
+    flex-direction: column;
+    .uploadresume-title{
+        margin-bottom: 0.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .uploadresume-details{
+        width:100%;
+        margin-bottom: 1.5rem;
+       
+    }
+}
+
+
+/* FORM */
+
+.createprofile-form{
+
+
+
+    gap:2rem;
+
+
+    input{
+        padding:0.4rem;
+        width: 100%;
+    }
+    input:focus{
+
+        width: 100%;
+     outline:none;
+    }
+    input::placeholder{
+        color:rgb(184, 183, 183);
+    }
+
+   /*  .dual-input-container{
+        display:flex;
+        align-items: center;
+        gap:1rem;
+    } */
+
+    .inputsection{
+        display:flex;
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 0.5rem;
+        gap:6px;
+        width: 100%;
+    }
+
+    button{
+        @include buttons;
+        margin-bottom: -0.5rem;
+        width: 100%;
+
+
+        
+    }
+    #complete-btn{
+
+        &:hover{
+
+            background-color: black;
+            color:white;
+        }
+    }
+}
+
+
+
+
+
+//MEDIA QUERIES || RESPONSIVE STYLES
+
+@media (max-width:1400px){
+    .uploadresume{
+
+
+        padding: 0rem 9rem;
+    }
+
+}
+
+@media (max-width:1300px){
+
+    .uploadresume{
+
+
+        padding: 0rem 5rem;
+    }
+}
+
+
+
+@media(max-width:1180px){
+
+    .uploadresume{
+
+
+        padding: 0rem 4rem;
+    }
+}
+@media(max-width:486px){
+
+    .uploadresume{
+
+
+        padding: 0rem 1rem;
+    }
+}
+

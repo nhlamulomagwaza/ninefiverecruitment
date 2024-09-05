@@ -1,0 +1,75 @@
+@import '../fragments/mixins/mixins.scss';
+
+.termsandconditions{
+    @include globalPadding;
+    
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+    .tc-content{
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        width:100%;
+       
+        
+        
+    }
+    .pdf-div{
+        padding: 3%;
+        background-color: #dedede;
+        margin-top: 5%;
+        width: 100%;
+        margin: 0 auto;
+      }
+      canvas.react-pdf__Page__canvas {
+        margin-bottom: 3%;
+      }
+
+
+      
+}
+
+
+
+
+
+//MEDIA QUERIES || RESPONSIVE STYLES
+
+@media (max-width:1400px){
+    .termsandconditions{
+
+
+        padding: 0rem 9rem;
+    }
+
+}
+
+@media (max-width:1300px){
+
+    .termsandconditions{
+
+
+        padding: 0rem 5rem;
+    }
+}
+
+
+
+@media(max-width:1180px){
+
+    .termsandconditions{
+
+
+        padding: 0rem 4rem;
+    }
+}
+@media(max-width:486px){
+
+    .termsandconditions{
+
+
+        padding: 0rem 1rem;
+    }
+}

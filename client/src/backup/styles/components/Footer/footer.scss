@@ -1,0 +1,82 @@
+@import '../../fragments/colors/colors.scss';
+
+@import '../../fragments/mixins/mixins.scss';
+@import '../../fragments/fonts/fonts.scss';
+
+
+//FOOTER
+
+
+
+.footer{
+background-color: $main-dark-color;
+color: $white;
+padding: 4rem 12rem;
+color:$gray-text;
+ 
+.footer-about-column, .footer-explore-column,
+.footer-legal-column, .footer-questions-column{
+
+    height:300px;
+}
+
+
+li{
+    margin-bottom: 1rem;
+}
+
+ .footer-titles{
+    margin-bottom: 4rem;
+    font-size: 1.2rem;
+    color: $white;
+    height:20px;
+
+
+
+    span{
+        color: $footer-logo-span;
+    }
+ }
+ .footerlogo{
+  font-size: 1.2rem;
+    font-family: $Orbitron;
+ }
+   .footer-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:5rem;
+
+   }
+
+   .footer-about-content{
+    width:30ch;
+    color:$gray-text;
+   }
+
+   .footer-about-info{
+
+    margin-bottom: 2rem;
+   }
+   .footer-social-icons{
+    color:$white;
+    display:flex;
+    align-items: center;
+    gap:2rem;
+    font-size: 1.2rem;
+
+   }
+
+   .footer-icon{
+    color: $white;
+    font-size: 1.2rem;
+   }
+   
+   .footer-questions-info{
+    display:flex;
+     gap: 2rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    text-wrap: wrap;
+   }
+}

@@ -1,0 +1,366 @@
+@import '../../styles/fragments/colors/colors.scss';
+
+@import '../fragments/mixins/mixins.scss';
+
+
+
+.candidateprofile{
+
+  
+  
+
+    @include globalPadding;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+
+    .candidateprofile-content{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      flex-direction: column;
+    
+    
+    .candidate-card{
+
+
+        border:1px solid black;
+    width:fit-content;
+        padding:2rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:3rem;
+     
+
+        .candidate-card-header{
+
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:0.2rem;
+            text-align: center;
+        }
+
+        .profile-details{
+           display:flex;
+           justify-content: center;
+           flex-direction: column;
+            .profile-detail-item{
+
+                margin-bottom: 0.5rem;
+                display:flex;
+                align-items: center;
+
+                .item-name{
+
+                  width:100px;
+                }
+            }
+
+           
+        }
+
+    }
+    }
+
+    .candidateprofile-editdelete-account{
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+
+  .editdeleteaccount-btn{
+
+    @include  buttons;
+  }
+  #deleteaccount-btn{
+
+    background-color: rgb(155, 50, 50);
+
+    &:hover{
+
+        background-color:  black;
+        color:white;
+    }
+  }
+    }
+}
+
+
+/* MEDIA || RESPONSIVE STYLES*/
+
+@media (max-width:1400px){
+  .candidateprofile{
+
+
+      padding: 0rem 9rem;
+  }
+
+}
+
+@media (max-width:1300px){
+
+  .candidateprofile{
+
+
+      padding: 0rem 5rem;
+  }
+}
+
+
+
+@media(max-width:1180px){
+
+  .candidateprofile{
+
+
+      padding: 0rem 4rem;
+  }
+ 
+}
+
+
+@media(max-width:560px){
+
+  .candidateprofile{
+    .candidateprofile-content{
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    flex-direction: column;
+  
+  
+  .candidate-card{
+
+
+      border:1px solid black;
+  width:320px;
+      padding:1rem;
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap:3rem;
+   
+
+      .candidate-card-header{
+
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          gap:0.2rem;
+          text-align: center;
+      }
+
+      .profile-details{
+         display:flex;
+         justify-content: center;
+        
+         flex-direction: column;
+          .profile-detail-item{
+
+              margin-bottom: 0.5rem;
+              display:flex;
+              align-items: center;
+     
+              .item-name{
+
+                width:100px;
+              }
+          }
+
+         
+      }
+
+  }
+  }
+
+
+
+  }
+
+}
+
+@media(max-width:486px){
+
+  .candidateprofile{
+
+
+      padding: 0rem 1rem;
+  }
+}
+@media(max-width:400px){
+
+  .candidateprofile{
+
+
+    
+
+      .candidateprofile-content{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      flex-direction: column;
+    
+    
+    .candidate-card{
+
+
+        border:1px solid black;
+    width:290px;
+        padding:1rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:3rem;
+     
+
+        .candidate-card-header{
+
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:0.2rem;
+            text-align: center;
+        }
+
+        .profile-details{
+           display:flex;
+           justify-content: center;
+           flex-direction: column;
+            .profile-detail-item{
+
+                margin-bottom: 0.5rem;
+                display:flex;
+                align-items: center;
+
+                .item-name{
+
+                  width:100px;
+                }
+            }
+
+           
+        }
+
+    }
+    }
+
+    .candidateprofile-editdelete-account{
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+
+  .editdeleteaccount-btn{
+
+    @include  buttons;
+  }
+  #deleteaccount-btn{
+
+    background-color: rgb(155, 50, 50);
+
+    &:hover{
+
+        background-color:  black;
+        color:white;
+    }
+  }
+    }
+
+
+  }
+}
+@media(max-width:320px){
+
+  .candidateprofile{
+
+
+    
+
+      .candidateprofile-content{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      flex-direction: column;
+    
+    
+    .candidate-card{
+
+
+        border:1px solid black;
+    width:290px;
+        padding:0.5rem;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap:3rem;
+     
+
+        .candidate-card-header{
+
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            gap:0.2rem;
+            text-align: center;
+        }
+
+        .profile-details{
+           display:flex;
+           justify-content: center;
+           flex-direction: column;
+            .profile-detail-item{
+
+                margin-bottom: 0.5rem;
+                display:flex;
+                align-items: center;
+
+                .item-name{
+
+                  width:100px;
+                }
+            }
+
+           
+        }
+
+    }
+    }
+
+    .candidateprofile-editdelete-account{
+
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+
+  .editdeleteaccount-btn{
+
+    @include  buttons;
+    padding:1rem 1rem;
+  }
+  #deleteaccount-btn{
+
+    background-color: rgb(155, 50, 50);
+
+    &:hover{
+
+        background-color:  black;
+        color:white;
+    }
+  }
+    }
+
+
+  }
+}

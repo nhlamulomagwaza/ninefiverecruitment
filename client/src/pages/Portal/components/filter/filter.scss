@@ -1,0 +1,262 @@
+@import '../../../../styles/fragments/colors/colors.scss';
+@import '../../../../styles/fragments/mixins/mixins.scss';
+
+.filter{
+   
+    
+    .filtercanvas{
+        background-color: $faq-background;
+         padding:2rem;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 4rem;
+        
+    }
+    
+    
+    .search{
+        display:flex;
+        gap:10px;
+        align-items: center;
+    }
+    
+    
+    
+    input{
+        background-color: transparent;
+        width:150%;
+        border:none;
+        padding:1rem;
+        color: black;
+        cursor:text;
+    }
+    
+    .icon{
+        color:black;
+    }
+    
+    .location{
+        display:flex;
+        gap:10px;
+        align-items: center;
+    }
+    
+    select{
+        background-color: transparent;
+     
+        width:150%;
+        padding:1rem;
+        border:none;
+        cursor:pointer;
+    }
+    
+    option{
+        color:black;
+        cursor:pointer;
+    }
+    
+    .remote{
+        display:flex;
+       justify-content: center;
+        align-items: center;
+        gap:0.6rem;
+       
+    }
+    .remote input[type="checkbox"]{
+        width:20px;
+        height:20px;
+        cursor: pointer;
+    }
+    
+    .savedjobs{
+        @include buttons;
+        margin-top: 0rem;
+    }
+    
+
+
+}
+//MEDIA || RESPONSIVE STYLES
+
+@media(max-width:1150px){
+    .filter{
+   
+    
+  width:100%;
+
+
+
+
+        .filtercanvas{
+            background-color: $faq-background;
+             padding:2rem;
+ /*          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap:2rem; */
+            
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        place-items: center;
+        width:100%;
+        gap:1rem;
+        }
+        
+        
+        
+        .search{
+            display:flex;
+            gap:10px;
+            align-items: center;
+        }
+        
+        
+        
+        input{
+            background-color: transparent;
+            width:150%;
+            border:none;
+            padding:1rem;
+            color: black;
+            cursor:text;
+        }
+        
+        .icon{
+            color:black;
+        }
+        
+        .location{
+            display:flex;
+            gap:10px;
+            align-items: center;
+        }
+        
+        select{
+            background-color: transparent;
+         
+            width:150%;
+            padding:1rem;
+            border:none;
+            cursor:pointer;
+        }
+        
+        option{
+            color:black;
+            cursor:pointer;
+        }
+        
+        .remote{
+            display:flex;
+           justify-content: center;
+            align-items: center;
+            gap:0.6rem;
+           
+        }
+        .remote input[type="checkbox"]{
+            width:20px;
+            height:20px;
+            cursor: pointer;
+        }
+        
+        .savedjobs{
+            @include buttons;
+            margin-top: 0rem;
+        }
+        
+    
+    
+    }
+}
+@media(max-width:700px){
+    .filter{
+   
+    
+  width:100%;
+
+
+
+
+        .filtercanvas{
+            background-color: $faq-background;
+             padding:1rem;
+          display:flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap:2rem; 
+            
+       
+        }
+        
+        
+        
+        .search{
+            display:flex;
+            gap:10px;
+            align-items: center;
+        }
+        
+        
+        
+        input{
+            background-color: transparent;
+            width:100%;
+            border:none;
+            padding:1rem;
+            color: black;
+            cursor:text;
+        }
+        
+        .icon{
+            color:black;
+        }
+        
+        .location{
+            display:flex;
+            gap:10px;
+            align-items: center;
+        }
+        
+        select{
+            background-color: transparent;
+         
+            width:100%;
+            padding:1rem;
+            border:none;
+            cursor:pointer;
+        }
+        
+        option{
+            color:black;
+            cursor:pointer;
+        }
+        
+        .remote{
+            display:flex;
+           justify-content: center;
+            align-items: center;
+            gap:0.6rem;
+           
+        }
+        .remote input[type="checkbox"]{
+            width:20px;
+            height:20px;
+            cursor: pointer;
+        }
+        
+        .savedjobs{
+            @include buttons;
+            margin-top: 0rem;
+        }
+        
+    
+    
+    }
+}
+
+
+
+
+

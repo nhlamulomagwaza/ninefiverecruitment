@@ -1,0 +1,47 @@
+@import '../../../styles/fragments/colors/colors.scss';
+@import '../../fragments//fonts/fonts.scss';
+@import '../../fragments//mixins/mixins.scss';
+.navbar{
+  
+   
+    padding:1rem 11rem;
+    margin-top: 1rem;
+   
+
+
+    .navbar-container{
+
+        background-color: $white;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:1rem 1rem;
+  
+    .desktop-menu-items{
+
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        gap:2rem;
+        cursor: pointer;
+      
+        .btn-menu{
+
+            @include buttons;
+            margin-top: 0;
+        }
+       
+    }
+.logo{
+    font-family: $Orbitron;
+    font-weight: bolder;
+    font-size: 1.2rem;
+
+    span{
+        color:$main-color;
+    }
+}
+}  
+
+
+}

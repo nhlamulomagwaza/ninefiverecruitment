@@ -1,0 +1,64 @@
+@import '../../fragments/mixins/mixins.scss';
+
+.clients-showcase{
+
+    @include globalPadding;
+    margin-bottom: 6rem;
+    margin-top: 3rem;
+
+    img{
+        width:100px;
+    }
+
+    .clients-showcase-title{
+        display:flex;
+        justify-content: center;
+        margin-bottom: 4rem;
+        font-size: 2rem;
+
+        span{
+            color:$main-color;
+        }
+    }
+}
+
+
+//MEDIA QUERIES || RESPONSIVE STYLES
+
+@media (max-width:1400px){
+    .clients-showcase{
+
+
+        padding: 0rem 9rem;
+    }
+}
+
+@media (max-width:1300px){
+
+    .clients-showcase{
+
+        padding:0rem 5rem;
+    }
+}
+
+
+@media(max-width:1180px){
+
+    .clients-showcase{
+
+
+        padding:0rem 4rem;
+    }
+}
+
+
+@media(max-width:486px){
+
+    .clients-showcase{
+
+        padding:0rem 1rem;
+        img{
+            width:100px;
+        }
+    }
+}

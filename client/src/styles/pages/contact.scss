@@ -1,0 +1,272 @@
+@import '../../styles/fragments/colors/colors.scss';
+
+@import '../fragments/mixins/mixins.scss';
+
+
+
+
+/* CONTACT SECTION || GLOBAL */
+
+.contact-section{
+
+    @include globalPadding;
+
+}
+
+
+/* CONTACT HEADER */
+
+
+.contact-header{
+
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+ 
+    span{
+        font-weight: 600;
+    }
+
+    .contact-circle{
+        background-color: $main-color2;
+        color:$white;
+     
+        height:95px;
+        width:95px;
+        font-size: 1.5rem;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-bottom: 1rem;
+       flex-wrap: wrap;
+    }
+
+    .contact-card{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+}
+
+
+/* CONTACT FORMS */
+
+.contact-forms{
+
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    .contact-forms-container{
+        display:flex;
+
+        justify-content: center;
+        align-items: center;
+
+
+
+        .first-column{
+
+
+            width:400px;
+            height:80vh;
+            background-image: url('../../assets/contact-bg2.webp');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            
+        }
+        .second-column{
+
+            width:700px;
+            height:80vh;
+           padding-left: 3rem;
+        
+        .contact-form-title{
+            font-weight: 400;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        }
+    
+     .contact-form{
+        input{
+            padding:0.7rem;
+            width:100%;
+        }
+        input:focus{
+
+   
+         outline:none;
+        }
+        input::placeholder{
+            color:rgb(184, 183, 183);
+        }
+        textarea{
+            resize: none;
+            padding:0.7rem;
+
+
+            &:focus{
+                outline:none;
+            }
+        }
+        textarea::placeholder{
+            color:rgb(184, 183, 183);
+        }
+        
+        }
+        button{
+
+        @include buttons;
+        }
+
+        .form-field{
+            display:flex;
+            flex-direction: column;
+            margin-top: 1rem;
+        }
+        label{
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+            font-size: 0.8rem;
+            color:$main-color2;
+            font-weight: 500;
+        }
+     }
+    }
+
+
+
+
+    @media (max-width:1400px){
+        .contact-section{
+    
+    
+            padding: 0rem 9rem;
+        }
+    
+    }
+    
+    @media (max-width:1300px){
+    
+        .contact-section{
+    
+    
+            padding: 0rem 5rem;
+        }
+    }
+    
+    
+    
+    @media(max-width:1180px){
+    
+        .contact-section{
+    
+    
+            padding: 0rem 4rem;
+        }
+    }
+
+
+    @media(max-width:745px){
+
+
+        .contact-header{
+            flex-direction: column;
+            gap:2rem;
+        }
+    }
+    @media(max-width:668px){
+
+
+      .contact-forms{
+
+        .contact-forms-container{
+            flex-direction: column;
+            .first-column{
+
+
+                width:100%;
+                height:40vh;
+                background-image: url('../../assets/contact-bg2.webp');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                margin-bottom: 2rem;
+                
+            }
+            .second-column{
+    
+                width:100%;
+                height:80vh;
+               padding-left: 0rem;
+            
+            .contact-form-title{
+                font-weight: 400;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+            }
+        
+
+
+
+
+        }
+      }
+    }
+    @media(max-width:486px){
+    
+        .contact-section{
+    
+    
+            padding: 0rem 1rem;
+        }
+    }
+    
+    @media(max-width:320px){
+
+
+        .contact-forms{
+  
+          .contact-forms-container{
+              flex-direction: column;
+              .first-column{
+  
+  
+                  width:100%;
+                  height:40vh;
+                  background-image: url('../../assets/contact-bg2.webp');
+                  background-size: cover;
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  margin-bottom: 2rem;
+                  
+              }
+              .second-column{
+      
+                  width:100%;
+                  height:90vh;
+                 padding-left: 0rem;
+              
+              .contact-form-title{
+                  font-weight: 400;
+                  font-size: 2rem;
+                  margin-bottom: 2rem;
+              }
+              }
+          
+  
+  
+  
+  
+          }
+        }
+      }
+    
