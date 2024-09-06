@@ -6,9 +6,9 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3500',
-        changeOrigin: true,
-        secure: false,
+        target: 'https://ninefiverecruitment.onrender.com',
+        changeOrigin: false,
+        secure: true,
       },
     },
   },
