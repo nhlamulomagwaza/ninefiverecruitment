@@ -161,7 +161,7 @@ const Resume = () => {
       formData.append("resume", resume); // Append the selected file to the FormData
 
       const res = await fetch(
-        `/api/candidates/createcandidate/${authUser?._id}`,
+        `https://ninefiverecruitment.onrender.com/api/candidates/createcandidate/${authUser?._id}`,
         {
           method: "POST",
           headers: {

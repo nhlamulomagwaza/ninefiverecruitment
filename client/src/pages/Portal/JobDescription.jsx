@@ -29,7 +29,7 @@ const JobDescription = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `/api/jobsportal/withdrawapplication/${jobId}/${candidateprofile?._id}`,
+        `https://ninefiverecruitment.onrender.com/api/jobsportal/withdrawapplication/${jobId}/${candidateprofile?._id}`,
         {
           method: "DELETE",
           headers: {
@@ -61,7 +61,7 @@ const JobDescription = () => {
     try {
       setLoading(true);
       const response = await fetch(
-        `/api/jobsportal/apply/${jobId}/${candidateprofile?._id}`,
+        `https://ninefiverecruitment.onrender.com/api/jobsportal/apply/${jobId}/${candidateprofile?._id}`,
         {
           method: "POST",
           headers: {
