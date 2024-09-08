@@ -90,7 +90,7 @@ const Resume = () => {
             setProfileComplete(true);
             location.reload();
           } else {
-            toast.error("Candidate profile not found.");
+            console.log("Candidate profile not found.");
           }
         } else {
           // Store the single candidate profile in local storage and context
@@ -351,7 +351,7 @@ const Resume = () => {
                     )}
                   </button>
 
-                  <button onClick={logoutUser}>Logout</button>
+                  <button  type="button" onClick={logoutUser}>Logout</button>
                 </div>
               </form>
 
