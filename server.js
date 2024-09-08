@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, '/client/dist'), {
   
 
 
-app.use(cors(corsOptions))
+//app.use(cors(corsOptions))
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
