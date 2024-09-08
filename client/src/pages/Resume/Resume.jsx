@@ -60,7 +60,7 @@ const Resume = () => {
 
   const fetchCandidateProfile = async () => {
     try {
-      const res = await fetch(`/api/candidates/getcandidates/`, {
+      const res = await fetch(`https://ninefiverecruitment.onrender.com/api/candidates/getcandidates/`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${authUserToken}`,

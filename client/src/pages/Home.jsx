@@ -34,7 +34,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Fade, Slide } from "react-awesome-reveal";
 import { NineFiveContext } from "../store/AppContext";
-import { useForm, ValidationError } from "@formspree/react";
+
+import toast from "react-hot-toast";
+import emailjs from '@emailjs/browser';
 const Home = () => {
   const { homeShowcaseRef } = useContext(NineFiveContext);
   const joinUsRef = useRef();
@@ -45,6 +47,30 @@ const Home = () => {
   const [ref, inView] = useInView({
     threshold: 0.1,
   });
+
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_zuvvf3a', 'template_a3m4abm', form.current, {
+        publicKey: 'UIGrOgThA3bvjULZV',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          toast.success('Message sent');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error('Failed to send message')
+        },
+      );
+  };
 
   return (
     <>
@@ -480,12 +506,12 @@ const Home = () => {
           <Fade>
             <h1 className="cta-title">Don't hesitate to contact us</h1>
 
-            <div className="form">
-              <input type="text" placeholder="Name" />
-              <input type="text" placeholder="email" />
-              <textarea placeholder="message" rows={10}></textarea>
-              <button>Send message</button>
-            </div>
+            <form className="form" ref={form} onSubmit={sendEmail}>
+              <input type="text" placeholder="Name" name="name" required id="name"/>
+              <input type="text" placeholder="email" name='email' required id="email"/>
+              <textarea placeholder="message" name="message" rows={10} required id="message"></textarea>
+              <button type="submit">Send message</button>
+            </form>
           </Fade>
         </div>
       </section>

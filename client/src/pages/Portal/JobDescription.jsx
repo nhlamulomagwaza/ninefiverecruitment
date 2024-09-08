@@ -15,7 +15,7 @@ const JobDescription = () => {
 
   const [setApplied] = useState(false);
   const fetchJobData = async () => {
-    const response = await fetch(`/api/jobsportal/getjob/${jobId}`);
+    const response = await fetch(`https://ninefiverecruitment.onrender.com/api/jobsportal/getjob/${jobId}`);
     const data = await response.json();
     setJob(data.job);
     console.log(data.job);

@@ -97,7 +97,7 @@ const EditResume = () => {
       formData.append("resume", resume); // Append the selected file to the FormData
 
       const res = await fetch(
-        `/api/candidates/updatecandidate/${authUser?._id}`,
+        `https://ninefiverecruitment.onrender.com/api/candidates/updatecandidate/${authUser?._id}`,
         {
           method: "PUT",
           headers: {

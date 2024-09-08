@@ -5,7 +5,32 @@ import { FaLocationDot } from "react-icons/fa6";
 import { FaGlobeAmericas } from "react-icons/fa";
 import { Slide } from "react-awesome-reveal";
 import '../styles/pages/contact.scss';
+import emailjs from '@emailjs/browser';
+import toast from "react-hot-toast";
+import { useRef } from "react";
+
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_zuvvf3a', 'template_a3m4abm', form.current, {
+        publicKey: 'UIGrOgThA3bvjULZV',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          toast.success('Message sent');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+          toast.error('Failed to send message')
+        },
+      );
+  };
+
   return (
  <>
  
@@ -89,17 +114,17 @@ const Contact = () => {
   <div className="second-column">
     <h1 className="contact-form-title">Contact Us</h1>
 
-    <form action="" className="contact-form">
+    <form action="" className="contact-form" ref={form} onSubmit={sendEmail}>
 
       <div className="form-field">
         <label htmlFor="name">Name</label>
-      <input type="text" name="name" id="name" placeholder="Name" />
+      <input type="text" name="name" id="name" placeholder="Name" required />
 
       </div>
 
       <div className="form-field">
       <label htmlFor="email">Email</label>
-      <input type="text" name="email" id="email" placeholder="Email" />
+      <input type="text" name="email" id="email" placeholder="Email" required />
 
       </div>
          
@@ -112,7 +137,7 @@ const Contact = () => {
          <div className="form-field">
 
           <label htmlFor="message">Message</label>
-          <textarea name="message" id="message" rows={5} placeholder="Message"></textarea>
+          <textarea name="message" id="message" rows={5} placeholder="Message" required></textarea>
          </div>
 
       

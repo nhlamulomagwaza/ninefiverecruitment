@@ -61,7 +61,7 @@ const Auth = () => {
     //BACKEND COMMUNICATION LOGIC
     try {
       setLoading(true);
-      const res = await fetch("/api/users/register", {
+      const res = await fetch("https://ninefiverecruitment.onrender.com/api/users/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, username, password, confirmPassword }),
@@ -122,7 +122,7 @@ const Auth = () => {
     //BACKEND COMMUNICATION LOGIC
     try {
       setLoading(true);
-      const res = await fetch("/api/users/login", {
+      const res = await fetch("https://ninefiverecruitment.onrender.com/api/users/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

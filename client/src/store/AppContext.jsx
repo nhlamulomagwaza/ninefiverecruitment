@@ -58,7 +58,7 @@ const AppContext = ({ children }) => {
     const fetchJobs = async () => {
       try {
         setLoadingJobs(true);
-        const response = await fetch(`/api/jobsportal/getjobs`, {
+        const response = await fetch(`https://ninefiverecruitment.onrender.com/api/jobsportal/getjobs`, {
           method: "GET",
         });
 

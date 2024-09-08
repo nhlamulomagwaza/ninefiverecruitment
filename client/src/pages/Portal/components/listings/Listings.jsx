@@ -42,7 +42,7 @@ const Listings = () => {
   const fetchSavedJobs = async () => {
     try {
       const candidateId = candidateprofile?._id.toString().trim();
-      const res = await fetch(`/api/jobsportal/getsavedjobs/${candidateId}`, {
+      const res = await fetch(`https://ninefiverecruitment.onrender.com/api/jobsportal/getsavedjobs/${candidateId}`, {
         method: "GET",
         headers: {
           Authorization: `Bearer ${authUserToken}`,

@@ -3,7 +3,8 @@
 const allowedOrigins = [
     'http://localhost:3500',
     'https://ninefiverecruitment.com',
-    'http://ninefiverecruitment.com'
+    'http://ninefiverecruitment.com',
+    'https://ninefiverecruitment.onrender.com/',
     
 ]
 

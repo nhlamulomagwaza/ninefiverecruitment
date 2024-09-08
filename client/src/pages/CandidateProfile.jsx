@@ -49,7 +49,7 @@ const CandidateProfile = () => {
         try {
           setProfileLoad(true);
 
-          const response = await fetch(`/api/candidates/getCandidate/${id}`, {
+          const response = await fetch(`https://ninefiverecruitment.onrender.com/api/candidates/getCandidate/${id}`, {
             method: "GET",
             headers: {
               Authorization: `Bearer ${authUserToken}`,
