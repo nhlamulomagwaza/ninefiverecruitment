@@ -1,6 +1,6 @@
 const {addJobs, getJobs, deleteJobs,
      updateJobs, getJob, saveJob, unsaveJob,
-     getSavedJobs}= require('../controllers/jobsController');
+     getSavedJobs, getApplicants}= require('../controllers/jobsController');
 
 const express= require('express');
 const router= express.Router();
@@ -15,6 +15,7 @@ router.get('/getjobs', getJobs);
 router.get('/getjob/:jobId', getJob);
 router.get('/getsavedjobs/:candidateId', authenticateUsers, getSavedJobs)
 router.put('/updatejobs/:jobId', authenticateUsers, authenticateAdmin, updateJobs);
+router.get('/getapplicants/:jobId', authenticateUsers, authenticateAdmin, getApplicants);
 router.delete('/deletejobs/:jobId', authenticateUsers, authenticateAdmin, deleteJobs);
 
 

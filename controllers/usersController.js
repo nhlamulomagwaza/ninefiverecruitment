@@ -62,65 +62,64 @@ const registerUser = async (req, res) => {
 };
 
 
-const loginUser = async (req, res) => {
-    try {
+const loginUser  = async (req, res) => {
+  try {
       const { email, password } = req.body;
-       let token;
-       let accessToken;
       if (!email || !password) {
-        return res.status(400).json('please fill in all the fields');
+          return res.status(400).json('please fill in all the fields');
       }
-  
+
       const user = await Users.findOne({ email });
-  
+
       if (!user) {
-        return res.status(400).json({ message: 'Invalid email or password' });
+          return res.status(400).json({ message: 'Invalid email or password' });
       }
-  
+
       const isMatch = await bcrypt.compare(password, user.password);
-  
+
       if (!isMatch) {
-        return res.status(400).json({ message: 'Invalid email or password' });
+          return res.status(400).json({ message: 'Invalid email or password' });
       }
-  
+
       // Find the existing token for the user
       const existingToken = await Tokens.findOne({ userId: user.id });
-  
+
+      // If an existing token is found, delete it from the database
       if (existingToken) {
-        // Use the existing token
-         accessToken = existingToken.token;
-      } else {
-        // Generate a new token if none exists
-         token = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET);
-         accessToken = await Tokens.create({
+          await Tokens.deleteOne({ userId: user.id });
+      }
+
+      // Generate a new token
+      const token = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_SECRET);
+      
+      // Store the new token in the Tokens model
+      const accessToken = await Tokens.create({
           userId: user.id,
           token,
-        });
-      }
-  
+      });
+
       // Generate a new refresh token
       const refreshToken = jwt.sign({ id: user.id, username: user.username }, process.env.JWT_REFRESH_SECRET);
-  
+
       // Store the refresh token in the RefreshTokens model
       await RefreshTokens.create({
-        userId: user.id,
-       
-        refreshToken: refreshToken,
+          userId: user.id,
+          refreshToken: refreshToken,
       });
-  
-      res.cookie('access_token', token, { httpOnly: true }); // 2 minutes
-  
+
+      res.cookie('access_token', token, { httpOnly: true });
+
       res.status(200).json({
-        message: 'Logged in successfully',
-        user,
-        accessToken: accessToken,
-        refreshToken: refreshToken,
+          message: 'Logged in successfully',
+          user,
+          accessToken: accessToken,
+          refreshToken: refreshToken,
       });
-    } catch (err) {
+  } catch (err) {
       console.error(err);
       return res.status(500).json({ msg: 'Internal server error' });
-    }
-  };
+  }
+};
 
 
 const logoutUser = async (req, res) => {

@@ -57,7 +57,24 @@ const JobDescription = () => {
       console.error(error);
     }
   };
+
+
+  const redirectToSignUp= ()=>{
+
+    let confirmRedirect= confirm('No candidate profile found, would you like to create your profile now?');
+
+    if(confirmRedirect){
+
+      navigate('/uploadresume');
+    }else return;
+
+    
+  }
   const applyForJob = async () => {
+
+    if(!candidateprofile || !authUserToken){
+      return redirectToSignUp();
+    }
     try {
       setLoading(true);
       const response = await fetch(

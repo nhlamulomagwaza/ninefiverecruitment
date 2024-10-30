@@ -21,7 +21,7 @@ const jobsSchema = new mongoose.Schema({
   },
   remote:{
      type:Boolean,
-     required:true,
+     required:false,
      default:false
   },
 
@@ -40,5 +40,24 @@ const jobsSchema = new mongoose.Schema({
     
   ],
 }, { timestamps: true });
+
+
+
+// Post-find middleware to validate applicants for existing jobs
+jobsSchema.post('find', async function(jobs) {
+  for (let i = 0; i < jobs.length; i++) {
+    const job = jobs[i];
+
+    // Loop through applicants and check if each candidate's ID exists in the database
+    for (let j = 0; j < job.applicants.length; j++) {
+      const candidate = await mongoose.model('Candidates').findById(job.applicants[j]);
+      if (!candidate) {
+        // Remove the invalid candidate ID from the applicants array
+        job.applicants.splice(j, 1);
+        j--; // Decrement the index to account for the removed element
+      }
+    }
+  }
+});
 
 module.exports = mongoose.model('Jobs', jobsSchema);

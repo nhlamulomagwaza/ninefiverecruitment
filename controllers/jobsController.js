@@ -8,7 +8,7 @@ const addJobs = async (req, res) => {
     const { title, description, company, industry, remote, location } = req.body;
     console.log(req.body);
     // Validate the input data
-    if (!title || !description || !industry || !company || !remote || !location) {
+    if (!title || !description || !industry || !company  || !location) {
       return res.status(400).json({ message: 'Please provide all required fields' });
     }
  
@@ -227,7 +227,35 @@ const getSavedJobs = async (req, res) => {
   }
 };
 
+const getApplicants = async (req, res) => {
+  try {
+    const { jobId } = req.params;
+
+    // Validate the input data
+    if (!jobId) {
+      return res.status(400).json({ message: 'Please provide a job ID' });
+    }
+
+    // Find the job document
+    const job = await Jobs.findById(jobId);
+
+    if (!job) {
+      return res.status(404).json({ message: 'Job not found' });
+    }
+
+    // Fetch the candidate documents using the job's applicants array
+    const applicants = await Candidates.find({ _id: { $in: job.applicants } });
+
+    res.status(200).json({ message: 'Applicants fetched successfully', candidates: applicants });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ message: 'Internal server error' });
+  }
+};
 
 
 
-module.exports = {  addJobs, deleteJobs, updateJobs, getJobs, getJob, saveJob, getSavedJobs, unsaveJob};
+
+module.exports = {  addJobs, deleteJobs, updateJobs, getJobs,
+   getJob, saveJob, getSavedJobs, unsaveJob,
+  getApplicants};
