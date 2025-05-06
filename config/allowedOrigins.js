@@ -9,6 +9,8 @@ const allowedOrigins = [
     'http://localhost:5173',
     'https://ninefiveadmin.netlify.app/',
   'http://ninefiveadmin.netlify.app/',
+  'https://ninefivedash.onrender.com',
+    'http://ninefivedash.onrender.com',
     'http://ninefiverecruitment.com',
     'https://ninefiverecruitment.onrender.com',
     'http://ninefiverecruitment.onrender.com',
