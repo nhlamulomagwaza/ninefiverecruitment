@@ -5,8 +5,10 @@ const allowedOrigins = [
     'https://ninefiverecruitment.com',
     'https://admin.ninefiverecruitment.com',
     'http://admin.ninefiverecruitment.com',
+    'http://localhost:5174',
     'http://localhost:5173',
-  
+    'https://ninefiveadmin.netlify.app/',
+  'http://ninefiveadmin.netlify.app/',
     'http://ninefiverecruitment.com',
     'https://ninefiverecruitment.onrender.com',
     'http://ninefiverecruitment.onrender.com',
