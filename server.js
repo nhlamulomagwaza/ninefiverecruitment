@@ -51,7 +51,7 @@ app.use(session({
 
 
   
-app.use('/api/candidates', authenticateUsers, authenticateAdmin,candidatesRouter);
+app.use('/api/candidates', authenticateUsers,candidatesRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/jobsportal', jobsRouter);
 app.use('/api/jobsportal', authenticateUsers, applicationsRoutes );
