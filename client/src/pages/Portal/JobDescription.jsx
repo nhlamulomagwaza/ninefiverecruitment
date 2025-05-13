@@ -99,12 +99,12 @@ const JobDescription = () => {
 
       console.log(data);
       if (!response.ok) {
-        return toast.error(data.message);
+       // return toast.error(data.message);
       }
 
       if (data.message === "You have already applied for this job" || response.status === 400) {
         setApplied(true);
-
+           setLoading(false);
         let widthDrawApplicationConfirm = confirm(
           "You have already applied for this job, Would you like to withdraw the application instead?"
         );
