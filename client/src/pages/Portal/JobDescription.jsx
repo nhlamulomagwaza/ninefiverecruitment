@@ -100,11 +100,11 @@ const JobDescription = () => {
       console.log(data);
       if (!response.ok) {
        // return toast.error(data.message);
-      }
+     setLoading(false);
 
       if (data.message === "You have already applied for this job" || response.status === 400) {
         setApplied(true);
-           setLoading(false);
+          
         let widthDrawApplicationConfirm = confirm(
           "You have already applied for this job, Would you like to withdraw the application instead?"
         );
@@ -115,7 +115,7 @@ const JobDescription = () => {
           navigate("/jobsportal");
         }
       }
-    } catch (error) {
+    }  } catch (error) {
       console.error(error);
     }
   };
