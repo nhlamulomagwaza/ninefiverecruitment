@@ -11,7 +11,7 @@ const applyJob = async (req, res) => {
       return res.status(400).json({ message: 'Please provide a job ID and candidate ID' });
     }
 
-    // Find the job document in the database
+    // Find the job document
     const job = await Jobs.findById(jobId);
 
     if (!job) {
