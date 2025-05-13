@@ -98,24 +98,25 @@ const JobDescription = () => {
       }
 
       console.log(data);
-      if (!response.ok) {
-       // return toast.error(data.message);
-     setLoading(false);
+     if (!response.ok) {
+      toast.error(data.message);
+  setLoading(false);
 
-      //if (data.message === "You have already applied for this job" || response.status === 400) {
-        setApplied(true);
-          
-        let widthDrawApplicationConfirm = confirm(
-          "You have already applied for this job, Would you like to withdraw the application instead?"
-        );
-        if (widthDrawApplicationConfirm) {
-          withdrawApplication();
-        } else {
-          alert("No problem then");
-          navigate("/jobsportal");
-        }
-      }
-    }   catch (error) {
+   if (data.message === "You have already applied for this job" || response.status === 400) {
+     
+//setApplied(true);
+    let widthDrawApplicationConfirm = confirm(
+      "You have already applied for this job, Would you like to withdraw the application instead?"
+    );
+    if (widthDrawApplicationConfirm) {
+      withdrawApplication();
+    } else {
+      alert("No problem then");
+      navigate("/jobsportal");
+    
+  }
+}
+    } }  catch (error) {
       console.error(error);
     }
   };
