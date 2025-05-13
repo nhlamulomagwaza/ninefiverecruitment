@@ -102,7 +102,7 @@ const JobDescription = () => {
        // return toast.error(data.message);
      setLoading(false);
 
-      if (data.message === "You have already applied for this job" || response.status === 400) {
+      //if (data.message === "You have already applied for this job" || response.status === 400) {
         setApplied(true);
           
         let widthDrawApplicationConfirm = confirm(
@@ -115,7 +115,7 @@ const JobDescription = () => {
           navigate("/jobsportal");
         }
       }
-    }  } catch (error) {
+    }   catch (error) {
       console.error(error);
     }
   };
